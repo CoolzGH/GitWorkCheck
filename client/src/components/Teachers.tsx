@@ -2,6 +2,7 @@ import { Grid } from "@material-ui/core";
 import React, { Component } from "react";
 import Teacher, { Stuff } from "./Teacher";
 import Preloader from "../gif/preloader.gif";
+import '../App.css';
 
 const allStuffNet: Stuff[] = [
   {
@@ -71,7 +72,9 @@ export default class MyCards extends Component<any, IState> {
             </Grid>
           </Grid>
         ) : (
-          <img src={Preloader} />
+            <div className="preloader">
+                <img src={Preloader} />
+            </div>
         )}
       </>
     );

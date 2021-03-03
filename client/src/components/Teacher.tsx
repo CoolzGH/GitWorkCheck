@@ -24,7 +24,7 @@ import {
     clickCount: number;
   }
   
-  export default class MyCard extends Component<IProps, IState> {
+  export default class Teacher extends Component<IProps, IState> {
     myStuff: Stuff;
     constructor(props: IProps) {
       super(props);
