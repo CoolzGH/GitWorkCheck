@@ -30,7 +30,7 @@ interface IState {
   allStuff: Stuff[];
 }
 
-export default class MyCards extends Component<any, IState> {
+export default class Teachers extends Component<any, IState> {
   constructor(props: any) {
     super(props);
     this.state = {
@@ -44,14 +44,6 @@ export default class MyCards extends Component<any, IState> {
     }, 5000);
   }
 
-  deleteElement = (stuff: Stuff) => {
-    console.log(`Will delete! ${JSON.stringify(stuff)}`);
-    const filtered = this.state.allStuff.filter(
-      (item: Stuff) => item !== stuff
-    );
-    this.setState({ allStuff: filtered });
-  };
-
   render() {
     return (
       <>
@@ -64,7 +56,6 @@ export default class MyCards extends Component<any, IState> {
                     <Teacher
                       key={item.title}
                       stuff={item}
-                      onDelete={this.deleteElement}
                     />
                   );
                 })}

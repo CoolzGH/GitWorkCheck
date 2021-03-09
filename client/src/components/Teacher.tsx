@@ -1,12 +1,8 @@
 import {
-    Button,
     Card,
-    CardActions,
     CardContent,
-    IconButton,
     Typography,
   } from "@material-ui/core";
-  import DeleteIcon from '@material-ui/icons/Delete';
   import React, { Component } from "react";
   
   export interface Stuff {
@@ -17,7 +13,6 @@ import {
   
   interface IProps {
     stuff: Stuff;
-    onDelete: (stuff:Stuff) => void
   }
   
   interface IState {
@@ -45,11 +40,6 @@ import {
       );
     };
   
-    deleteHandler = () => {
-      console.log(`trying to delete me? ${JSON.stringify(this.myStuff)}`)
-      this.props.onDelete(this.myStuff);
-    }
-  
     render() {
       return (
         <Card>
@@ -67,18 +57,6 @@ import {
               You have clicked {this.state.clickCount} times
             </Typography>
           </CardContent>
-          <CardActions>
-            <Button
-              variant="contained"
-              color="secondary"
-              onClick={this.clickHandler}
-            >
-              Secondary
-            </Button>
-            <IconButton aria-label="delete" onClick={this.deleteHandler} >
-              <DeleteIcon fontSize="large" />
-            </IconButton>
-          </CardActions>
         </Card>
       );
     }
