@@ -39,9 +39,15 @@
 
 h1 { 
   text-align: center;
+  color: #ffffff;
 }
 
 .preloader {
   text-align: center;
 }
+
+.teachersgrid {
+  background-color: #ffffff;
+}
+
 
